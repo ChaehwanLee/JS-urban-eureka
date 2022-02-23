@@ -1,0 +1,37 @@
+<script>
+    function display(a){
+        var result = '';
+        resutlt += '<table border="1">';
+        for(var i in a){
+            result +='<tr>';
+            result +='<td>'+a[i].id+'</td>';
+            result +='<td>'+a[i].name+'</td>';
+            result +='<td>'+a[i].age+'</td>';
+            result += '</tr>';
+
+            //result += '<h1>'+a[i].id+' '+a[i].name+' '+a[i].age+'</h1>';
+        };
+        result += '</table>';
+        document.querySelector('#dd').innerHTML = result;
+    };
+
+    function getdata(){
+        var a = [
+            {'id':'id01', 'name':'james', 'age':10},
+            {'id':'id02', 'name':'james', 'age':20},
+            {'id':'id03', 'name':'james', 'age':30}
+        ];
+        display(a);
+    };
+    window.onload = function(){
+        getdata();
+    };
+
+    //for(var i = 0; i<10;i++){
+    //}; 0 부터 9까지 표현
+</script>
+
+<section>
+    <h1>JS04</h1>
+    <div id="dd"></div>
+</section>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    <style>
+
+    </style>
+    <script src="{% static 'js/home.js' %}"></script>
+    <script>
+    // 바디가 실행되면 자동으로 실행
+        window.onload = function(){
+            hh3 = document.querySelector('header > h3');
+            //alert(hh3.innerHTML);
+            //console.log(hh3.innerHTML);
+        };
+    </script>
+<!--    <script>-->
+<!--        function func1(){-->
+<!--            h2 = document.querySelector('#hh2');-->
+<!--            h2.innerHTML = 'Click Event';-->
+<!--        };-->
+<!--    </script>-->
+</head>
+<body>
+    <header>
+        {% if request.session.sessionid == None %}
+            <span><a href="login">LOGIN</a></span>
+            <span><a href="register">REGISTER</a></span>
+        {% else %}
+            <span>{{request.session.sessionid}}</span>
+            <span><a href="logout">LOGOUT</a></span>
+        {% endif %}
+        <h1><a href="/"HTML5 & CSS </a></h1>
+        <h3>Javascript, AJAX</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="js01">js01</a></li>
+            <li><a href="js02">js02</a></li>
+            <li><a href="js03">js03</a></li>
+            <li><a href="js04">js04</a></li>
+            <li><a href="js05">js05</a></li>
+            <li><a href="jq01">jq01</a></li>
+            <li><a href="jq02">jq02</a></li>
+            <li><a href="jq03">jq03</a></li>
+            <li><a href="jq04">jq04</a></li>
+            <li><a href="jq05">jq05</a></li>
+        </ul>
+    </nav>
+    {% if center !=None %}
+        {% include center %}
+    {% else %}
+        <section></section>
+    {% endif %}
+    <footer></footer>
+</body>
+</html>

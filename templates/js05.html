@@ -1,0 +1,23 @@
+<script>
+    function go(){
+        c = confirm('Are You Going now..');
+        if(c == true){
+            location.href='https://www.naver.com/';
+        };
+    };
+    // setTimeout(function(){
+    //    location.href='http://www.naver.com';
+    //},3000);
+
+    setInterval(function(){
+        var d = new Date();
+        document.querySelector('#tt').innerHTML = d.toLocaleTimeString();
+    },1000);
+
+</script>
+
+<section>
+<!--    <button onclick="go();">GO</button>-->
+    <h1 id="tt">JS05</h1>
+    <a href="#" onclick="go();")>GO</a>
+</section>

@@ -1,0 +1,28 @@
+<script>
+    function f1(f){
+        return f(100);
+    };
+    f2 = function(d){
+        return d + 999;
+    };
+    f3 = function(){
+        return function(){
+            alert('f3');
+        };
+    };
+
+    result = f3();
+    result();
+
+    // result = f1(f2)
+    // alert(result);
+
+    var str = '10+20+30+40';
+    result = eval(str);
+    alert(result);
+    // 변수 선언해서 사용할 때 주의, result 위쪽에서 함수였던 것이 아래쪽에서 숫자 => 이런식으로 하면 안됨
+</script>
+
+<section>
+    <h1>JS03</h1>
+</section>
